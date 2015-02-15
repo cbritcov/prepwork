@@ -1,0 +1,31 @@
+<?php
+
+$access_content = array(
+	array(
+		'type' => 'div',
+		'class' => 'failure',
+		'elements' => array(
+			array(
+				'type' => 'p',
+				'class' => 'error',
+				'content' => 'Access Denied'
+			)
+		)
+	),
+	array(
+		'type' => 'p',
+		'content' => 'You do not have permission to view this page.'
+	),
+	array(
+		'type' => 'p',
+		'content' => 'You might need to login, or you might need administrator privileges.'
+	),
+	array(
+		'type' => 'p',
+		'content' => 'Please contact the administrator if the problem cannot be resolved.'
+	)
+);
+
+$registry = return_registry();
+$access = new view($registry);
+$access->displayContent($access_content);

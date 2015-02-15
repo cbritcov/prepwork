@@ -1,0 +1,86 @@
+<?php
+
+$registry = return_registry();
+$usertype = $registry->router->g_params['usertype'];
+
+$data = null;
+
+$data = $registry->db->fetch(
+	array(
+		'table' => 'user',
+		'select' => array('*'),
+		'where' => 'usertype = "'.$usertype.'"'
+	)
+);
+
+$list_content = array(
+	array(
+		'type' => 'h',
+		'number' => '2',
+		'content' => ucfirst($usertype).' List'
+	)
+);
+
+$list = new view($registry);
+$list->displayContent($list_content);
+
+foreach($data as $dt):
+	$content = null;
+	$content = array(
+		'type' => 'tr',
+		'elements' => array(
+			array(
+				'type' => 'td',
+				'content' => $dt['id']
+			),
+			array(
+				'type' => 'td',
+				'content' => $dt['email']
+			),
+			array(
+				'type' => 'td',
+				'content' => $dt['username']
+			),
+			array(
+				'type' => 'td',
+				'content' => $dt['password']
+			),
+			array(
+				'type' => 'td',
+				'content' => $dt['usertype']
+			)
+		)
+	);
+endforeach;
+
+$table_header = array(
+	array(
+		'type' => 'table',
+		'class' => 'list',
+		'elements' => array(
+			array(
+				'type' => 'th',
+				'content' => 'Id',
+			),
+			array(
+				'type' => 'th',
+				'content' => 'Email',
+			),
+			array(
+				'type' => 'th',
+				'content' => 'Username'
+			),
+			array(
+				'type' => 'th',
+				'content' => 'Password'
+			),
+			array(
+				'type' => 'th',
+				'content' => 'UserType'
+			),
+			$content
+		)
+	)
+);
+
+$list->displayContent($table_header);

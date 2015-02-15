@@ -1,0 +1,77 @@
+<?php
+
+$login_content = array(
+	array(
+		'type' => 'form',
+		'redirect' => array(
+				'url'=>'user/processlogin'
+			),
+		'elements' => array(
+			array(
+				'type' => 'fieldset',
+				'legend' => 'Authentication Required',
+				'elements' => array(
+					array(
+						'type' => 'textfield',
+						'id' => 'username',
+						'name' => 'username',
+						'labelId' => 'username',
+						'labelName' => 'username',
+						'labelContent' => 'Username',
+						'validation' => array(
+							'id' => 'username',
+							'required' => true,
+							'exists' => array(
+								'error_message' => 'username does not exist'
+							),
+							'length' =>array(
+								'min'=>4,
+								'max'=>15
+							)
+						)
+					),
+					array(
+						'type' => 'brClear',
+						'options' => 'all'
+					),
+					array(
+						'type' => 'passwordfield',
+						'id' => 'password',
+						'name' => 'password',
+						'labelId' => 'password',
+						'labelName' => 'password',
+						'labelContent' => 'Password',
+						'validation' => array(
+							'id' => 'password',
+							'required' => true,
+							'match' => array(
+								'to' => 'username',
+								'error_message' => 'password is incorrect'
+							),
+							'length' =>array(
+								'min'=>4,
+								'max'=>15
+							)
+						)
+					),
+					array(
+						'type' => 'brClear',
+						'options' => 'all'
+					),
+					array(
+						'type' => 'submit',
+						'class' => 'submitButton',
+						'name' => 'loginButton',
+						'id' => 'loginButton',
+						'content' => 'login',
+						'labelContent' => '&nbsp;'
+					)
+				)
+			)
+		)
+	)
+);
+
+$registry = return_registry();
+$login = new view($registry);
+$login->displayContent($login_content);

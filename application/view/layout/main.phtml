@@ -1,0 +1,233 @@
+<?php
+
+if(isset($this->registry->session->data['user'])):
+
+	$button_one = array(
+		'type' => 'null'
+	);
+
+	$button_two =	array(
+		'type' => 'logoutlink',
+		'elements' => array(
+			array(
+				'type' => 'div',
+				'class' => 'button',
+				'content' => 'Logout'
+			)
+		)
+	);
+
+	$button_three = array(
+		'type' => 'null',
+	);
+
+	$button_four = array(
+		'type' => 'listlink',
+		'controller' => 'user',
+		'get' => array(
+			'0' => 'usertype',
+			'1' => 'user'
+		),
+		'elements' => array(
+			array(
+				'type' => 'div',
+				'class' => 'button',
+				'content' => 'User List',
+
+			)
+		)
+	);
+
+	$button_five = array(
+		'type' => 'listlink',
+		'controller' => 'user',
+		'get' => array(
+			'0' => 'usertype',
+			'1' => 'admin'
+		),
+		'elements' => array(
+			array(
+				'type' => 'div',
+				'class' => 'button',
+				'content' => 'Admin List'
+			)
+		)
+	);
+
+else:
+
+	$button_one =	array(
+		'type' => 'homelink',
+		'elements' => array(
+			array(
+				'type' => 'div',
+				'class' => 'button',
+				'content' => 'Home'
+			)
+		)
+	);
+
+	$button_two =	array(
+		'type' => 'loginlink',
+		'elements' => array(
+			array(
+				'type' => 'div',
+				'class' => 'button',
+				'content' => 'Login'
+			)
+		)
+	);
+
+	$button_three = array(
+		'type' => 'registerlink',
+		'elements' => array(
+			array(
+				'type' => 'div',
+				'class' => 'button',
+				'content' => 'Register'
+			)
+		)
+	);
+
+	$button_four = array(
+		'type' => 'forgotlink',
+		'elements' => array(
+			array(
+				'type' => 'div',
+				'class' => 'button',
+				'content' => 'Forgot Password'
+			)
+		)
+	);
+
+	$button_five = array(
+		'type' => 'null'
+	);
+
+
+endif;
+
+if(!empty($this->registry->session->data['messenger'])):
+	$type= $this->registry->session->data['messenger']['type'];
+
+	$message = '<div class=\''.$type.'\'>'.$this->registry->session->data['messenger']['message'].'</div>';
+	$messenger = array(
+		'type' => 'script',
+		'script' => 'text/javascript',
+		'content' => 'jQuery.facebox("'.$message.'")'
+	);
+	$this->registry->session->destroy('messenger');
+else: $messenger = array(
+		'type' => 'div',
+		'class' => 'collapse',
+		'content' => ''
+);
+endif;
+
+$main_content = array(
+	array(
+		'type' => 'dtd',
+	),
+	array(
+		'type' => 'pageTitle',
+		'title' => $pageTitle
+	),
+	array(
+		'type' => 'styleSheet',
+		'name' => 'main',
+		'media' => 'screen'
+	),
+	array(
+		'type' => 'javascript',
+		'name' => 'mootools',
+	),
+	array(
+		'type' => 'javascript',
+		'name' => 'jquery',
+	),
+	array(
+		'type' => 'javascript',
+		'name' => 'jquery/core',
+	),
+	array(
+		'type' => 'javascript',
+		'name' => 'facebox/facebox',
+	),
+	array(
+		'type' => 'body',
+		'elements' => array(
+			array(
+				'type' => 'div',
+				'class' => 'pageTop',
+				'elements' => array(
+					array(
+						'type' =>'div',
+						'class' => 'header',
+						'elements' => array(
+							array(
+								'type' => 'div',
+								'class' => 'logo'
+							)
+						)
+					),
+					array(
+						'type' =>'div',
+						'class' => 'bar',
+						'elements' => array(
+							array(
+								'type' => 'div',
+								'class' => 'breadCrumbs',
+								'elements' => array(
+									array(
+										'type' => 'breadcrumb',
+									)
+								)
+							)
+						)
+					)
+				)
+			),
+			array(
+				'type' => 'div',
+				'class' => 'pageMiddle',
+				'elements' => array(
+					array(
+						'type' => 'div',
+						'class' => 'left',
+						'elements' => array(
+							$button_one,
+							$button_two,
+							$button_three,
+							$button_four,
+							$button_five
+						)
+					),
+					array(
+						'type' => 'div',
+						'class' => 'right',
+						'elements' => array(
+							$messenger,
+							array(
+								'type' => 'inclusion',
+								'file' => $script
+							)
+						)
+					)
+				)
+			),
+			array(
+				'type' => 'div',
+				'class' => 'pageBottom',
+				'elements' => array(
+					array(
+						'type' => 'div',
+						'class' => 'footer'
+					)
+				)
+			)
+		)
+	)
+);
+
+$body = new view($this->registry);
+$body->displayContent($main_content);
