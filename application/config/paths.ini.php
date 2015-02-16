@@ -1,6 +1,6 @@
 [site_path]
-site_path = http://server/framework/public_html/
+site_path = www.local.prepwork.com/public_html/
 
 [include_paths]
-library_path = D:\server\www\framework\library/
-application_path = D:\server\www\framework\application/
+library_path = /Users/cbritcov/Sites/prepwork/library/
+application_path = /Users/cbritcov/Sites/prepwork/application/

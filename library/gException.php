@@ -4,7 +4,7 @@ class gException extends Exception
 {
 	public function __construct($message)
 	{
-		printr('', 'Genius Reflection');
+		printr('', 'Prepwork Exception');
 
 		printr($message, 'Message');
 

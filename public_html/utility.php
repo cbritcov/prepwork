@@ -6,6 +6,7 @@ define('__APPLICATION_PATH', $paths['include_paths']['application_path']);
 define('__LIBRARY_PATH', $paths['include_paths']['library_path']);
 define('__VIEW_PATH', $paths['include_paths']['application_path'].'view/');
 
+
 function __autoload($class_name)
 {
 	$inc = null;

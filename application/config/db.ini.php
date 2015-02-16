@@ -1,8 +1,8 @@
 [mysql]
 db_username = root
-db_password = root
+db_password = 11111
 db_server = localhost
-db_name = genius
+db_name = prepwork
 
 [tables]
 user.id = "id int(11) not null auto_increment"

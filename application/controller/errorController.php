@@ -9,14 +9,14 @@ class errorController extends controller_abstract
 
 	function pagenotfoundAction()
 	{
-		$this->pageTitle = 'Genius';
+		$this->pageTitle = 'Prepwork';
 		$this->mainTitle = 'Page Not Found';
 		$this->view();
 	}
 
 	function accessdeniedAction()
 	{
-		$this->pageTitle = 'Genius';
+		$this->pageTitle = 'Prepwork';
 		$this->mainTitle = 'Access Denied';
 		$this->view();
 	}

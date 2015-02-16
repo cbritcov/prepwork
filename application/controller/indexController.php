@@ -4,7 +4,7 @@ class indexController extends controller_abstract
 {
 	function indexAction()
 	{
-		$this->pageTitle = 'Genius';
+		$this->pageTitle = 'Prepwork';
 		$this->mainTitle = 'Welcome!';
 		$this->view();
 	}

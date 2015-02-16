@@ -1,2 +1,2 @@
 [application]
-site_name = 'Project Genius by Marc Plotz'
+site_name = 'Prepwork'

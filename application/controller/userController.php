@@ -4,35 +4,35 @@ class userController extends controller_abstract
 {
 	function indexAction()
 	{
-		$this->pageTitle = 'Genius';
+		$this->pageTitle = 'Prepwork';
 		$this->mainTitle = 'Welcome!';
 		$this->view();
 	}
 
 	function listAction()
 	{
-		$this->pageTitle = 'Genius';
+		$this->pageTitle = 'Prepwork';
 		$this->mainTitle = 'User Lists';
 		$this->view();
 	}
 
 	function loginAction()
 	{
-		$this->pageTitle = 'Genius';
+		$this->pageTitle = 'Prepwork';
 		$this->mainTitle = 'User Login';
 		$this->view();
 	}
 
 	function contactAction()
 	{
-		$this->pageTitle = 'Genius';
+		$this->pageTitle = 'Prepwork';
 		$this->mainTitle = 'Contact Us';
 		$this->view();
 	}
 
 	function processloginAction()
 	{
-		$this->pageTitle = 'Genius';
+		$this->pageTitle = 'Prepwork';
 		$this->mainTitle = 'Processing Login';
 
 		if(!empty($_SESSION['navigator'])):
@@ -49,7 +49,7 @@ class userController extends controller_abstract
 
 	function logoutAction()
 	{
-		$this->pageTitle = 'Genius';
+		$this->pageTitle = 'Prepwork';
 		$this->mainTitle = 'Processing Logout';
 		unset($_SESSION['user']);
 		$this->registry->navigator->redirect(array('url'=>'user/login', 'messenger' => 'You have logged out successfully', 'type' => 'success'));
@@ -57,14 +57,14 @@ class userController extends controller_abstract
 
 	function registerAction()
 	{
-		$this->pageTitle = 'Genius';
+		$this->pageTitle = 'Prepwork';
 		$this->mainTitle = 'Registration';
 		$this->view();
 	}
 
 	function processregisterAction()
 	{
-		$this->pageTitle = 'Genius';
+		$this->pageTitle = 'Prepwork';
 		$this->mainTitle = 'Processing Registration';
 
 		if(!empty($_SESSION['navigator'])):
