@@ -5,7 +5,7 @@ class router extends router_abstract
 	public function load($registry)
 	{
 		if(empty($this->controller_path)):
-			throw new gException('Class '.get_class($this).' requires a controller path');
+			throw new gException('Class '.get_class($this).' requires a controllers path');
 		endif;
 
 		if(empty($this->view_path)):
