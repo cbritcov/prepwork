@@ -1,0 +1,7 @@
+<?php
+echo "contact us";
+?>
+
+
+
+<a href='../../css/b.png' rel='facebox'>test</a>

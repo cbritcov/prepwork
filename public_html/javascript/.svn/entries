@@ -1,0 +1,60 @@
+8
+
+dir
+260
+svn://localhost/projects/trunk/genesis/public_html/javascript
+svn://localhost
+
+
+
+2009-06-21T08:43:28.639868Z
+249
+root
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+8e688afb-9e78-d945-a1b1-841c2f3a58d0
+
+facebox
+dir
+
+jquery
+dir
+
+jquery.js
+file
+
+
+
+
+2009-07-14T13:35:07.612000Z
+92d4f1412222f2dc12627ab42b66fc1c
+2009-06-21T08:43:28.639868Z
+249
+root
+has-props
+
+mootools.js
+file
+
+
+
+
+2009-07-14T13:35:07.421000Z
+5b115c9e42d29143ee0c3d9cfc13f183
+2009-06-21T08:43:28.639868Z
+249
+root
+has-props
+

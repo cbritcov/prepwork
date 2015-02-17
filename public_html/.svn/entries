@@ -1,0 +1,73 @@
+8
+
+dir
+260
+svn://localhost/projects/trunk/genesis/public_html
+svn://localhost
+
+
+
+2009-06-23T20:55:04.587273Z
+250
+root
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+8e688afb-9e78-d945-a1b1-841c2f3a58d0
+
+.htaccess
+file
+
+
+
+
+2009-07-14T13:35:07.803000Z
+f8f9566128f348fa7f8057b4fb5ced65
+2009-06-21T08:43:28.639868Z
+249
+root
+
+css
+dir
+
+graphics
+dir
+
+index.php
+file
+
+
+
+
+2009-07-14T13:35:07.808000Z
+86a956ec3795ec054a90b3cc8d316f57
+2009-06-21T08:43:28.639868Z
+249
+root
+
+javascript
+dir
+
+utility.php
+file
+
+
+
+
+2009-07-14T13:35:07.797000Z
+a7b6d967c6b7f610d7248d1f90d32e32
+2009-06-21T08:43:28.639868Z
+249
+root
+

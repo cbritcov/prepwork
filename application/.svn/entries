@@ -1,0 +1,52 @@
+8
+
+dir
+260
+svn://localhost/projects/trunk/genesis/application
+svn://localhost
+
+
+
+2009-06-23T20:55:04.587273Z
+250
+root
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+8e688afb-9e78-d945-a1b1-841c2f3a58d0
+
+bootstrap.php
+file
+
+
+
+
+2009-07-14T13:35:07.893000Z
+d2b1c61178aae8489caff9aeae1d48ac
+2009-06-23T20:55:04.587273Z
+250
+root
+
+config
+dir
+
+controller
+dir
+
+model
+dir
+
+view
+dir
+

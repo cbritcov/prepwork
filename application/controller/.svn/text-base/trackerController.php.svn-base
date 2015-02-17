@@ -1,0 +1,13 @@
+<?php
+
+class trackerController extends controller_abstract
+{
+	function indexAction()
+	{
+		$this->pageTitle = 'Genesis For PHP';
+		$this->mainTitle = 'Tracker';
+		$this->copyright = '2009 (c) Genesis For PHP';
+		$this->allowedLevel = 'guest';
+		$this->view();
+	}
+}

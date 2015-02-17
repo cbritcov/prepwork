@@ -1,0 +1,31 @@
+<?php
+
+$found_content = array(
+	array(
+		'type' => 'div',
+		'class' => 'failure',
+		'elements' => array(
+			array(
+				'type' => 'p',
+				'class' => 'error',
+				'content' => 'Error 404 - Page Not Found'
+			)
+		)
+	),
+	array(
+		'type' => 'p',
+		'content' => 'The requested page could not be found.'
+	),
+	array(
+		'type' => 'p',
+		'content' => 'Please use the "back button" on your browser to return to the previous page.'
+	),
+	array(
+		'type' => 'p',
+		'content' => 'This violation has been logged in the Application Access Control Center for security reasons.'
+	)
+);
+
+$registry = return_registry();
+$found = new view($registry);
+$found->displayContent($found_content);

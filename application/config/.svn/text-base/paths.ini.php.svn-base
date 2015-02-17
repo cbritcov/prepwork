@@ -1,0 +1,6 @@
+[site_path]
+site_path = http://server/development/genesis/public_html/
+
+[include_paths]
+library_path = D:\www\public_html\development\genesis\library/
+application_path = D:\www\public_html\development\genesis\application/

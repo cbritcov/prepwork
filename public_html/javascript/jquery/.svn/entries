@@ -1,0 +1,54 @@
+8
+
+dir
+260
+svn://localhost/projects/trunk/genesis/public_html/javascript/jquery
+svn://localhost
+
+
+
+2009-06-21T08:43:28.639868Z
+249
+root
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+8e688afb-9e78-d945-a1b1-841c2f3a58d0
+
+accordion.js
+file
+
+
+
+
+2009-07-14T13:35:07.387000Z
+1136540101bda82678978fd2c947987e
+2009-06-21T08:43:28.639868Z
+249
+root
+has-props
+
+core.js
+file
+
+
+
+
+2009-07-14T13:35:07.370000Z
+38199db78ea694d159045f4142cafd83
+2009-06-21T08:43:28.639868Z
+249
+root
+has-props
+
